@@ -13,6 +13,7 @@
 
     <link rel="stylesheet" href="assets/styles/reset.css">
     <link rel="stylesheet" href="assets/styles/style.css">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <style type="text/css">
         @import "assets/fonts/Wisdom/stylesheet.css";
         .link, button { cursor: pointer; }
@@ -116,26 +117,26 @@
         </div>
     </div>
 </section>
-<section class="video-content">
+<section class="clip-content">
     <div class="container-fluid">
-        <div class="video-clip">
-            <div class="video-control" id="video-over">
-                <h3>Explore Our Awesomeness</h3>
-                <img src="assets/icons/badge-playbutton.svg" alt="Play Video" class="play-button">
-                <p>Click to play the video</p>
+        <div class="clip-center-place">
+            <div id="video">
+                <div class="video-control" id="video-play">
+                    <h3>Explore Our Awesomeness</h3>
+                    <img src="assets/icons/badge-playbutton.svg" alt="Play Video" class="play-button" style="width:88px; height:88px">
+                    <p>Click to play the video</p>
+                </div>
+                <div class="video-control" id="video-over"></div>
+                <video id="myVideo" preload="auto" loop poster="assets/images/works/video_image.jpg" width="854px" height="480px">
+                    <source src="assets/video/PragueUn.mp4" type="video/mp4">
+                    <source src="assets/video/PragueUn.ogg" type="video/ogg">
+                    <source src="assets/video/PragueUn.webm" type="video/webm">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/EzVAMCLYbY0" frameborder="0"></iframe>
+                </video>
             </div>
-            <video poster="assets/images/works/video_image.jpg" width="854px" height="480px" controls autoplay loop>
-                <source src="assets/video/PragueUn.mp4" type="video/mp4">
-                <source src="assets/video/PragueUn.ogg" type="video/ogg">
-                <source src="assets/video/PragueUn.webm" type="video/webm">
-                <iframe width="560" height="315" src="https://www.youtube.com/embed/EzVAMCLYbY0" frameborder="0"></iframe>
-            </video>
         </div>
     </div>
 </section>
-
-
-
 <section id="portfolio">
     <div class="container">
         <div class="portfolio-content">
@@ -145,65 +146,101 @@
             </div>
             <div class="portfolio-items">
                 <div class="portfolio-item">
-                    <img src="assets/images/projects/item_123.png" alt="Project one">
-                    <div class="portfolio-item-description">
-                        <a href="#"><img src="assets/icons/badge-imageplus.svg" alt="To learn more..."></a>
+                    <img class="portfolio-item-pict" src="assets/images/projects/item_123.png" alt="Project One">
+                    <div class="portfolio-item-link">
+                        <a href="#">
+                            <img src="assets/icons/badge-imageplus.svg" alt="To learn more..." style="width:60px; height:60px">
+                        </a>
+                    </div>
+                    <div class="portfolio-item-name">
                         <p>Project One</p>
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <img src="assets/images/projects/item_234.png" alt="Project one">
-                    <div class="portfolio-item-description">
-                        <a href="#"><img src="assets/icons/badge-imageplus.svg" alt="To learn more..."></a>
+                    <img class="portfolio-item-pict" src="assets/images/projects/item_234.png" alt="Project Two">
+                    <div class="portfolio-item-link">
+                        <a href="#">
+                            <img src="assets/icons/badge-imageplus.svg" alt="To learn more..." style="width:60px; height:60px">
+                        </a>
+                    </div>
+                    <div class="portfolio-item-name">
                         <p>Project Two</p>
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <img src="assets/images/projects/item_345.png" alt="Project one">
-                    <div class="portfolio-item-description">
-                        <a href="#"><img src="assets/icons/badge-imageplus.svg" alt="To learn more..."></a>
+                    <img class="portfolio-item-pict" src="assets/images/projects/item_345.png" alt="Project Three">
+                    <div class="portfolio-item-link">
+                        <a href="#">
+                            <img src="assets/icons/badge-imageplus.svg" alt="To learn more..." style="width:60px; height:60px">
+                        </a>
+                    </div>
+                    <div class="portfolio-item-name">
                         <p>Project Three</p>
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <img src="assets/images/projects/item_456.png" alt="Project one">
-                    <div class="portfolio-item-description">
-                        <a href="#"><img src="assets/icons/badge-imageplus.svg" alt="To learn more..."></a>
+                    <img class="portfolio-item-pict" src="assets/images/projects/item_456.png" alt="Project Four">
+                    <div class="portfolio-item-link">
+                        <a href="#">
+                            <img src="assets/icons/badge-imageplus.svg" alt="To learn more..." style="width:60px; height:60px">
+                        </a>
+                    </div>
+                    <div class="portfolio-item-name">
                         <p>Project Four</p>
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <img src="assets/images/projects/item_567.png" alt="Project one">
-                    <div class="portfolio-item-description">
-                        <a href="#"><img src="assets/icons/badge-imageplus.svg" alt="To learn more..."></a>
+                    <img class="portfolio-item-pict" src="assets/images/projects/item_567.png" alt="Project Five">
+                    <div class="portfolio-item-link">
+                        <a href="#">
+                            <img src="assets/icons/badge-imageplus.svg" alt="To learn more..." style="width:60px; height:60px">
+                        </a>
+                    </div>
+                    <div class="portfolio-item-name">
                         <p>Project Five</p>
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <img src="assets/images/projects/item_678.png" alt="Project one">
-                    <div class="portfolio-item-description">
-                        <a href="#"><img src="assets/icons/badge-imageplus.svg" alt="To learn more..."></a>
+                    <img class="portfolio-item-pict" src="assets/images/projects/item_678.png" alt="Project Six">
+                    <div class="portfolio-item-link">
+                        <a href="#">
+                            <img src="assets/icons/badge-imageplus.svg" alt="To learn more..." style="width:60px; height:60px">
+                        </a>
+                    </div>
+                    <div class="portfolio-item-name">
                         <p>Project Six</p>
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <img src="assets/images/projects/item_789.png" alt="Project one">
-                    <div class="portfolio-item-description">
-                        <a href="#"><img src="assets/icons/badge-imageplus.svg" alt="To learn more..."></a>
+                    <img class="portfolio-item-pict" src="assets/images/projects/item_789.png" alt="Project one">
+                    <div class="portfolio-item-link">
+                        <a href="#">
+                            <img src="assets/icons/badge-imageplus.svg" alt="To learn more..." style="width:60px; height:60px">
+                        </a>
+                    </div>
+                    <div class="portfolio-item-name">
                         <p>Project Seven</p>
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <img src="assets/images/projects/item_890.png" alt="Project one">
-                    <div class="portfolio-item-description">
-                        <a href="#"><img src="assets/icons/badge-imageplus.svg" alt="To learn more..."></a>
+                    <img class="portfolio-item-pict" src="assets/images/projects/item_890.png" alt="Project Eight">
+                    <div class="portfolio-item-link">
+                        <a href="#">
+                            <img src="assets/icons/badge-imageplus.svg" alt="To learn more..." style="width:60px; height:60px">
+                        </a>
+                    </div>
+                    <div class="portfolio-item-name">
                         <p>Project Eight</p>
                     </div>
                 </div>
                 <div class="portfolio-item">
-                    <img src="assets/images/projects/item_901.png" alt="Project one">
-                    <div class="portfolio-item-description">
-                        <a href="#"><img src="assets/icons/badge-imageplus.svg" alt="To learn more..."></a>
+                    <img class="portfolio-item-pict" src="assets/images/projects/item_901.png" alt="Project Nine">
+                    <div class="portfolio-item-link">
+                        <a href="#">
+                            <img src="assets/icons/badge-imageplus.svg" alt="To learn more..." style="width:60px; height:60px">
+                        </a>
+                    </div>
+                    <div class="portfolio-item-name">
                         <p>Project Nine</p>
                     </div>
                 </div>
@@ -211,16 +248,16 @@
         </div>
     </div>
 </section>
-<section id="team">
+<section class="bg-gray" id="team">
     <div class="container">
         <div class="team-content">
             <div class="section-title">
                 <h2>Our Team.</h2>
                 <p>We understand your requirement and provide quality works.</p>
             </div>
-            <div class="team-members">
+            <div class="team-items">
                 <div class="team-member" data-target="tm_info-1">
-                    <div class="tm-card">
+                    <div class="tm_card">
                         <img src="assets/images/people/team_123.jpg">
                         <h5>Michael Schmitt</h5><br>
                         <span>Founder &amp; CEO</span>
@@ -258,11 +295,13 @@
                             experience crowdfunding facebook seed round A/B testing mass market.</p>
                     </div>
                     <div class="socials">
-                        <a href="#"><img src="assets/icons/icon_team-all_links.svg" alt="About us..." style="width:36px; height:36px;"></a>
-                        <a href="#"><img src="assets/icons/icon_team-fb_gray.svg" style="width:15px; height:15px;">Facebook</a>
-                        <a href="#"><img src="assets/icons/icon_team-twit_gray.svg" style="width:15px; height:15px;">Twitter</a>
-                        <a href="#"><img src="assets/icons/icon_team-link_gray.svg" style="width:15px; height:15px;">Linkedln</a>
-                        <a href="#"><img src="assets/icons/icon_team-inst_gray.svg" style="width:15px; height:15px;">Instagram</a>
+                        <img src="assets/icons/icon_team-all_links.svg" alt="About us in..." style="width:36px; height:36px;">
+                        <div class="socials-links">
+                            <a href="#"><img src="assets/icons/icon_team-fb_gray.svg" style="width:15px; height:15px;">Facebook</a>
+                            <a href="#"><img src="assets/icons/icon_team-twit_gray.svg" style="width:15px; height:15px;">Twitter</a>
+                            <a href="#"><img src="assets/icons/icon_team-link_gray.svg" style="width:15px; height:15px;">Linkedln</a>
+                            <a href="#"><img src="assets/icons/icon_team-inst_gray.svg" style="width:15px; height:15px;">Instagram</a>
+                        </div>
                     </div>
                 </div>
                 <div class="tm_info tm_info_2">
@@ -274,11 +313,13 @@
                             suscipit, distinctio, tempore tempora quisquam aspernatur.</p>
                     </div>
                     <div class="socials">
-                        <a href="#"><img src="assets/icons/icon_team-all_links.svg" alt="About us..." style="width:36px; height:36px;"></a>
-                        <a href="#"><img src="assets/icons/icon_team-fb_gray.svg" style="width:15px; height:15px;">Facebook</a>
-                        <a href="#"><img src="assets/icons/icon_team-twit_gray.svg" style="width:15px; height:15px;">Twitter</a>
-                        <a href="#"><img src="assets/icons/icon_team-link_gray.svg" style="width:15px; height:15px;">Linkedln</a>
-                        <a href="#"><img src="assets/icons/icon_team-inst_gray.svg" style="width:15px; height:15px;">Instagram</a>
+                        <img src="assets/icons/icon_team-all_links.svg" alt="About us in..." style="width:36px; height:36px;">
+                        <div class="socials-links">
+                            <a href="#"><img src="assets/icons/icon_team-fb_gray.svg" style="width:15px; height:15px;">Facebook</a>
+                            <a href="#"><img src="assets/icons/icon_team-twit_gray.svg" style="width:15px; height:15px;">Twitter</a>
+                            <a href="#"><img src="assets/icons/icon_team-link_gray.svg" style="width:15px; height:15px;">Linkedln</a>
+                            <a href="#"><img src="assets/icons/icon_team-inst_gray.svg" style="width:15px; height:15px;">Instagram</a>
+                        </div>
                     </div>
                 </div>
                 <div class="tm_info tm_info_3">
@@ -292,11 +333,13 @@
                             Varius sit amet mattis vulputate enim nulla.</p>
                     </div>
                     <div class="socials">
-                        <a href="#"><img src="assets/icons/icon_team-all_links.svg" alt="About us..." style="width:36px; height:36px;"></a>
-                        <a href="#"><img src="assets/icons/icon_team-fb_gray.svg" style="width:15px; height:15px;">Facebook</a>
-                        <a href="#"><img src="assets/icons/icon_team-twit_gray.svg" style="width:15px; height:15px;">Twitter</a>
-                        <a href="#"><img src="assets/icons/icon_team-link_gray.svg" style="width:15px; height:15px;">Linkedln</a>
-                        <a href="#"><img src="assets/icons/icon_team-inst_gray.svg" style="width:15px; height:15px;">Instagram</a>
+                        <img src="assets/icons/icon_team-all_links.svg" alt="About us in..." style="width:36px; height:36px;">
+                        <div class="socials-links">
+                            <a href="#"><img src="assets/icons/icon_team-fb_gray.svg" style="width:15px; height:15px;">Facebook</a>
+                            <a href="#"><img src="assets/icons/icon_team-twit_gray.svg" style="width:15px; height:15px;">Twitter</a>
+                            <a href="#"><img src="assets/icons/icon_team-link_gray.svg" style="width:15px; height:15px;">Linkedln</a>
+                            <a href="#"><img src="assets/icons/icon_team-inst_gray.svg" style="width:15px; height:15px;">Instagram</a>
+                        </div>
                     </div>
                 </div>
                 <div class="tm_info tm_info_4">
@@ -310,11 +353,13 @@
                             donec pretium vulputate sapien nec.</p>
                     </div>
                     <div class="socials">
-                        <a href="#"><img src="assets/icons/icon_team-all_links.svg" alt="About us..." style="width:36px; height:36px;"></a>
-                        <a href="#"><img src="assets/icons/icon_team-fb_gray.svg" style="width:15px; height:15px;">Facebook</a>
-                        <a href="#"><img src="assets/icons/icon_team-twit_gray.svg" style="width:15px; height:15px;">Twitter</a>
-                        <a href="#"><img src="assets/icons/icon_team-link_gray.svg" style="width:15px; height:15px;">Linkedln</a>
-                        <a href="#"><img src="assets/icons/icon_team-inst_gray.svg" style="width:15px; height:15px;">Instagram</a>
+                        <img src="assets/icons/icon_team-all_links.svg" alt="About us in..." style="width:36px; height:36px;">
+                        <div class="socials-links">
+                            <a href="#"><img src="assets/icons/icon_team-fb_gray.svg" style="width:15px; height:15px;">Facebook</a>
+                            <a href="#"><img src="assets/icons/icon_team-twit_gray.svg" style="width:15px; height:15px;">Twitter</a>
+                            <a href="#"><img src="assets/icons/icon_team-link_gray.svg" style="width:15px; height:15px;">Linkedln</a>
+                            <a href="#"><img src="assets/icons/icon_team-inst_gray.svg" style="width:15px; height:15px;">Instagram</a>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -576,19 +621,19 @@
 </section>
 <footer>
     <div class="container">
-        <div class="row contact-blocks">
-            <span class="col-sm- col-md-6 col-lg-3 logo-ft">Alexis</span>
-            <div class="col-sm- col-md-6 col-lg-3 contact-block1">
+        <div class="contact-blocks">
+            <span class="logo-ft">Alexis</span>
+            <div class="contact-block cb1">
                 <h5>Alexis LLC.</h5>
                 <p>4125 Bringhton Circle Road</p>
                 <p>Little Falls, MN 56345</p>
             </div>
-            <div class="col-sm- col-md-6 col-lg-3 contact-block2">
+            <div class="contact-block cb2">
                 <h5>Alexis LLC UK.</h5>
                 <p>81 Golden Knowes Road</p>
                 <p>FRESHFIELD L37 6TP</p>
             </div>
-            <div class="col-sm- col-md-6 col-lg-3 contact-follow">
+            <div class="contact-block cb3">
                 <h5>Follow Us.</h5>
                 <div class="socials-ft">
                     <a href="https://fb.com" target="_blank"><img src="assets/icons/icon_ft-fb_wht.svg" alt="Facebook"></a>
@@ -601,7 +646,7 @@
     </div>
 </footer>
 
-
+<script src="assets/scripts/vplay.js"></script>
 
 </body>
 </html>
