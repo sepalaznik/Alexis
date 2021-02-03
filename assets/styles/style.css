@@ -46,7 +46,10 @@ display: inline-block;
 margin-top: 45px;
 margin-bottom: 67px;
 }
-header button, button.pricing-item-but {
+header button,
+button.pricing-item-but,
+button.get-start-but,
+button.message-form_submit {
 width: 180px;
 height: 50px;
 border-radius: 25px;
@@ -59,13 +62,13 @@ text-transform: uppercase;
 color: rgb(255,255,255);
 box-shadow: none;
 }
-header button {
+header button, button.get-start-but, button.message-form_submit {
 background-color: rgb(252,95,69);
 border: 3px solid rgb(252,95,69);
 }
-header button:hover {
+header button:hover, .get-start-but:hover {
 background-color: transparent;
-/* background-color: rgb(255,255,255); */
+/* background-color: rgb(255,255,255); what is better? */
 color: rgb(252,95,69);
 }
 
@@ -116,12 +119,7 @@ font-family: 'Wisdom script';
 font-size: 35px;
 color: rgb(97,97,97);
 }
-span.logo-ft {
-font-family: 'Wisdom script';
-font-size: 45px;
-color: rgb(255,255,255);
-}
-span.logo-hd:first-letter, span.logo-ft:first-letter {
+span.logo-hd:first-letter {
 color: rgb(252,95,69);
 }
 nav {
@@ -241,11 +239,12 @@ letter-spacing: -0.1px;
 color: rgb(97,97,97);
 }
 
-.focus-content, .portfolio-content, .team-content, .steps-content, .pricing-content, .review-content {
+.focus-content, .portfolio-content, .team-content, .steps-content,
+.pricing-content, .review-content, .why-content, .message-block  {
 padding-top: 138px;
 padding-bottom: 70px;
 }
-.focus-service-items, .portfolio-items, .team-items, .pricing-table {
+.focus-service-items, .portfolio-items, .team-items, .pricing-table, .why-features {
 margin: 62px -15px;
 display: flex;
 flex-direction: row;
@@ -834,6 +833,10 @@ cursor: pointer;
 }
 .sli-links .control-slide.active {
 border: 2px solid rgb(252,95,69);
+background: -moz-radial-gradient(circle, rgb(252,95,69), rgb(252,95,69) 4px, transparent 4px, transparent 8px);
+background: -o-radial-gradient(circle, rgb(252,95,69), rgb(252,95,69) 4px, transparent 4px, transparent 8px);
+background: -webkit-radial-gradient(circle, rgb(252,95,69), rgb(252,95,69) 4px, transparent 4px, transparent 8px);
+background: radial-gradient(circle, rgb(252,95,69), rgb(252,95,69) 4px, transparent 4px, transparent 8px);
 }
 
 #prewbutton, #nextbutton {
@@ -875,7 +878,6 @@ align-items: flex-start;
 background-color: rgb(255,255,255);
 padding: 40px 65px;
 }
-
 .rv_sign {
 color: rgb(39,39,39);
 margin-top: 20px;
@@ -904,15 +906,110 @@ color: rgb(252,95,69);
 .slide_2 .review-info { border-bottom: 3px solid rgb(56,198,149); }
 .slide_3 .review-info { border-bottom: 3px solid rgb(178,124,245); }
 .slide_4 .review-info { border-bottom: 3px solid rgb(254,185,96); }
-.slide_5 .review-info { border-bottom: 3px solid rgb(252,95,69); }
-.slide_6 .review-info { border-bottom: 3px solid rgb(56,198,149); }
+.slide_5 .review-info { border-bottom: 3px solid rgb(252,255,0); }
+.slide_6 .review-info { border-bottom: 3px solid rgb(109,207,252); }
+
+
+.why-item {
+width: calc(33.3% - 80px);
+margin: 30px 40px;
+}
+.wi-title {
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+justify-content: flex-start;
+margin-bottom: 30px;
+}
+.wi-title img {
+margin-right: 10px;
+}
+.get-start {
+display: flex;
+flex-direction: row;
+align-items: center;
+justify-content: center;
+}
+.get-start h3 {
+margin-right: 25px;
+text-align: right;
+}
+
+section.bg-darkgray {
+background-color: rgb(204,204,204);
+}
+.message-form {
+margin: 60px 180px 0 180px;
+text-align: center;
+}
+.message-form input {
+margin: 12px 15px;
+width: calc(50% - 32px);
+padding: 20px 16px;
+font-family: 'Poppins', sans-serif;
+font-weight: 400;
+font-size: 16px;
+color: rgb(97,97,97);
+border: 0;
+border-radius: 3px;
+outline: none;
+}
+.message-form textarea {
+margin: 12px 15px;
+width: calc(100% - 32px);
+padding: 20px 16px;
+font-family: 'Poppins', sans-serif;
+font-weight: 400;
+font-size: 16px;
+color: rgb(97,97,97);
+border: 0;
+border-radius: 3px;
+outline: none;
+}
+button.message-form_submit {
+margin: 20px auto 0;
+}
+button.message-form_submit:hover {
+background-color: rgb(255,255,255);
+color: rgb(252,95,69);
+}
 
 footer {
 background-color: rgb(63,64,73);
 }
 .contact-blocks {
+margin: 0 -15px;
+padding-top: 50px;
+padding-bottom: 38px;
+display: flex;
+flex-direction: row;
+align-items: flex-start;
+justify-content: center;
+flex-wrap: wrap;
+}
+.contact-item {
+width: calc(25% - 30px);
+margin: 15px;
+text-align: left;
 color: rgb(255,255,255);
 }
-h1.logo-ft {
+
+.contact_1 h5 { color: rgb(56,198,149); margin-bottom: 40px; }
+.contact_2 h5 { color: rgb(178,124,245); margin-bottom: 40px; }
+.contact_3 h5 { color: rgb(254,185,96); margin-bottom: 40px; }
+
+.foot-item-logo {
+width: calc(25% - 30px);
+margin: 15px;
+text-align: center;
+vertical-align: middle;
+font-family: 'Wisdom script';
+font-size: 45px;
 color: rgb(255,255,255);
+}
+.foot-item-logo span {
+color: rgb(252,95,69);
+}
+.socials-ft a {
+margin-right: 15px;
 }
