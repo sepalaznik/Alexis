@@ -9,11 +9,17 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Sacramento&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Reenie+Beanie&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="assets/styles/reset.css">
     <link rel="stylesheet" href="assets/styles/style.css">
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="assets/scripts/jquery-1.7.2.min.js"></script>
     <style type="text/css">
         @import "assets/fonts/Wisdom/stylesheet.css";
         .link, button { cursor: pointer; }
@@ -117,9 +123,9 @@
         </div>
     </div>
 </section>
-<section class="clip-content">
+<section class="video-content">
     <div class="container-fluid">
-        <div class="clip-center-place">
+        <div class="player-center-place">
             <div id="video">
                 <div class="video-control" id="video-play">
                     <h3>Explore Our Awesomeness</h3>
@@ -127,11 +133,12 @@
                     <p>Click to play the video</p>
                 </div>
                 <div class="video-control" id="video-over"></div>
-                <video id="myVideo" preload="auto" loop poster="assets/images/works/video_image.jpg" width="854px" height="480px">
+                <video id="myVideo" loop poster="assets/images/works/video_image.jpg" width="854px" height="480px">
                     <source src="assets/video/PragueUn.mp4" type="video/mp4">
-                    <source src="assets/video/PragueUn.ogg" type="video/ogg">
+                    <!-- <source src="assets/video/PragueUn.ogg" type="video/ogg">
                     <source src="assets/video/PragueUn.webm" type="video/webm">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/EzVAMCLYbY0" frameborder="0"></iframe>
+-->
                 </video>
             </div>
         </div>
@@ -255,110 +262,114 @@
                 <h2>Our Team.</h2>
                 <p>We understand your requirement and provide quality works.</p>
             </div>
-            <div class="team-items">
-                <div class="team-member" data-target="tm_info-1">
-                    <div class="tm_card">
-                        <img src="assets/images/people/team_123.jpg">
-                        <h5>Michael Schmitt</h5><br>
-                        <span>Founder &amp; CEO</span>
-                    </div>
-                </div>
-                <div class="team-member" data-target="tm_info_2">
-                    <div class="tm_card">
-                        <img src="assets/images/people/team_234.jpg">
-                        <h5>David Krämer</h5><br>
-                        <span>Lead Developer</span>
-                    </div>
-                </div>
-                <div class="team-member" data-target="tm_info_3">
-                    <div class="tm_card">
-                        <img src="assets/images/people/team_345.jpg">
-                        <h5>Anna Schröder</h5><br>
-                        <span>Designer</span>
-                    </div>
-                </div>
-                <div class="team-member" data-target="tm_info_4">
-                    <div class="tm_card">
-                        <img src="assets/images/people/team_456.jpg">
-                        <h5>Jason Teichmann</h5><br>
-                        <span>Consultant</span>
-                    </div>
-                </div>
-                <div class="tm_info tm_info_1">
-                    <div class="tm_info-overlay">
-                        <h4>About Michael.</h4>
-                        <p>Monetization first mover advantage iPad. Interaction design buzz handshake.
-                            Stealth agile development branding. Backing facebook hackathon conversion
-                            startup scrum project niche market business-to-consumer paradigm shift traction.
-                            Rockstar bandwidth twitter ownership success disruptive series A financing
-                            user experience buyer client social proof validation hypotheses. User
-                            experience crowdfunding facebook seed round A/B testing mass market.</p>
-                    </div>
-                    <div class="socials">
-                        <img src="assets/icons/icon_team-all_links.svg" alt="About us in..." style="width:36px; height:36px;">
-                        <div class="socials-links">
-                            <a href="#"><img src="assets/icons/icon_team-fb_gray.svg" style="width:15px; height:15px;">Facebook</a>
-                            <a href="#"><img src="assets/icons/icon_team-twit_gray.svg" style="width:15px; height:15px;">Twitter</a>
-                            <a href="#"><img src="assets/icons/icon_team-link_gray.svg" style="width:15px; height:15px;">Linkedln</a>
-                            <a href="#"><img src="assets/icons/icon_team-inst_gray.svg" style="width:15px; height:15px;">Instagram</a>
+            <div class="tabs-container">
+                <ul class="team-items tabs">
+                    <li class="active">
+                        <a href="">
+                            <img src="assets/images/people/team_123.jpg">
+                            <h5>Michael Schmitt</h5>
+                            <p>Founder &amp; CEO</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="assets/images/people/team_234.jpg">
+                            <h5>David Krämer</h5>
+                            <p>Lead Developer</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="assets/images/people/team_345.jpg">
+                            <h5>Anna Schröder</h5>
+                            <p>Designer</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="">
+                            <img src="assets/images/people/team_456.jpg">
+                            <h5>Jason Teichmann</h5>
+                            <p>Consultant</p>
+                        </a>
+                    </li>
+                </ul>
+                <div class="tabs-content">
+                    <div class="tabs-panel active" data-index="0">
+                        <div class="tm_info-overlay">
+                            <h4>About Michael.</h4>
+                            <p>Monetization first mover advantage iPad. Interaction design buzz handshake.
+                                Stealth agile development branding. Backing facebook hackathon conversion
+                                startup scrum project niche market business-to-consumer paradigm shift traction.
+                                Rockstar bandwidth twitter ownership success disruptive series A financing
+                                user experience buyer client social proof validation hypotheses. User
+                                experience crowdfunding facebook seed round A/B testing mass market.</p>
+                        </div>
+                        <div class="socials">
+                            <img src="assets/icons/icon_team-all_links.svg" alt="About us in..." style="width:36px; height:36px;">
+                            <div class="socials-links">
+                                <a href="#"><img src="assets/icons/icon_team-fb_gray.svg" style="width:15px; height:15px;">Facebook</a>
+                                <a href="#"><img src="assets/icons/icon_team-twit_gray.svg" style="width:15px; height:15px;">Twitter</a>
+                                <a href="#"><img src="assets/icons/icon_team-link_gray.svg" style="width:15px; height:15px;">Linkedln</a>
+                                <a href="#"><img src="assets/icons/icon_team-inst_gray.svg" style="width:15px; height:15px;">Instagram</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="tm_info tm_info_2">
-                    <div class="tm_info-overlay">
-                        <h4>About David.</h4>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                            Dignissimos facere soluta eligendi doloribus sunt minus,
-                            amet sit. Modi possimus consectetur culpa, itaque odio similique
-                            suscipit, distinctio, tempore tempora quisquam aspernatur.</p>
-                    </div>
-                    <div class="socials">
-                        <img src="assets/icons/icon_team-all_links.svg" alt="About us in..." style="width:36px; height:36px;">
-                        <div class="socials-links">
-                            <a href="#"><img src="assets/icons/icon_team-fb_gray.svg" style="width:15px; height:15px;">Facebook</a>
-                            <a href="#"><img src="assets/icons/icon_team-twit_gray.svg" style="width:15px; height:15px;">Twitter</a>
-                            <a href="#"><img src="assets/icons/icon_team-link_gray.svg" style="width:15px; height:15px;">Linkedln</a>
-                            <a href="#"><img src="assets/icons/icon_team-inst_gray.svg" style="width:15px; height:15px;">Instagram</a>
+                    <div class="tabs-panel" data-index="1">
+                        <div class="tm_info-overlay">
+                            <h4>About David.</h4>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                                Dignissimos facere soluta eligendi doloribus sunt minus,
+                                amet sit. Modi possimus consectetur culpa, itaque odio similique
+                                suscipit, distinctio, tempore tempora quisquam aspernatur.</p>
+                        </div>
+                        <div class="socials">
+                            <img src="assets/icons/icon_team-all_links.svg" alt="About us in..." style="width:36px; height:36px;">
+                            <div class="socials-links">
+                                <a href="#"><img src="assets/icons/icon_team-fb_gray.svg" style="width:15px; height:15px;">Facebook</a>
+                                <a href="#"><img src="assets/icons/icon_team-twit_gray.svg" style="width:15px; height:15px;">Twitter</a>
+                                <a href="#"><img src="assets/icons/icon_team-link_gray.svg" style="width:15px; height:15px;">Linkedln</a>
+                                <a href="#"><img src="assets/icons/icon_team-inst_gray.svg" style="width:15px; height:15px;">Instagram</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="tm_info tm_info_3">
-                    <div class="tm_info-overlay">
-                        <h4>About Anna.</h4>
-                        <p>Ut etiam sit amet nisl. Blandit massa enim nec dui nunc mattis enim.
-                            Vulputate odio ut enim blandit. Vitae purus faucibus ornare suspendisse
-                            sed nisi lacus. Duis at tellus at urna condimentum mattis pellentesque id.
-                            Lorem donec massa sapien faucibus et. Nam libero justo laoreet sit amet.
-                            Eu augue ut lectus arcu bibendum at varius vel pharetra.
-                            Varius sit amet mattis vulputate enim nulla.</p>
-                    </div>
-                    <div class="socials">
-                        <img src="assets/icons/icon_team-all_links.svg" alt="About us in..." style="width:36px; height:36px;">
-                        <div class="socials-links">
-                            <a href="#"><img src="assets/icons/icon_team-fb_gray.svg" style="width:15px; height:15px;">Facebook</a>
-                            <a href="#"><img src="assets/icons/icon_team-twit_gray.svg" style="width:15px; height:15px;">Twitter</a>
-                            <a href="#"><img src="assets/icons/icon_team-link_gray.svg" style="width:15px; height:15px;">Linkedln</a>
-                            <a href="#"><img src="assets/icons/icon_team-inst_gray.svg" style="width:15px; height:15px;">Instagram</a>
+                    <div class="tabs-panel" data-index="2">
+                        <div class="tm_info-overlay">
+                            <h4>About Anna.</h4>
+                            <p>Ut etiam sit amet nisl. Blandit massa enim nec dui nunc mattis enim.
+                                Vulputate odio ut enim blandit. Vitae purus faucibus ornare suspendisse
+                                sed nisi lacus. Duis at tellus at urna condimentum mattis pellentesque id.
+                                Lorem donec massa sapien faucibus et. Nam libero justo laoreet sit amet.
+                                Eu augue ut lectus arcu bibendum at varius vel pharetra.
+                                Varius sit amet mattis vulputate enim nulla.</p>
+                        </div>
+                        <div class="socials">
+                            <img src="assets/icons/icon_team-all_links.svg" alt="About us in..." style="width:36px; height:36px;">
+                            <div class="socials-links">
+                                <a href="#"><img src="assets/icons/icon_team-fb_gray.svg" style="width:15px; height:15px;">Facebook</a>
+                                <a href="#"><img src="assets/icons/icon_team-twit_gray.svg" style="width:15px; height:15px;">Twitter</a>
+                                <a href="#"><img src="assets/icons/icon_team-link_gray.svg" style="width:15px; height:15px;">Linkedln</a>
+                                <a href="#"><img src="assets/icons/icon_team-inst_gray.svg" style="width:15px; height:15px;">Instagram</a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="tm_info tm_info_4">
-                    <div class="tm_info-overlay">
-                        <h4>About Jason.</h4>
-                        <p>Tellus mauris a diam maecenas sed. Arcu cursus vitae congue mauris rhoncus.
-                            Dui faucibus in ornare quam. Praesent elementum facilisis leo vel fringilla
-                            est ullamcorper. Pellentesque elit eget gravida cum. Ornare quam viverra
-                            orci sagittis eu volutpat odio. Elementum eu facilisis sed odio. Molestie
-                            ac feugiat sed lectus. Fringilla phasellus faucibus scelerisque eleifend
-                            donec pretium vulputate sapien nec.</p>
-                    </div>
-                    <div class="socials">
-                        <img src="assets/icons/icon_team-all_links.svg" alt="About us in..." style="width:36px; height:36px;">
-                        <div class="socials-links">
-                            <a href="#"><img src="assets/icons/icon_team-fb_gray.svg" style="width:15px; height:15px;">Facebook</a>
-                            <a href="#"><img src="assets/icons/icon_team-twit_gray.svg" style="width:15px; height:15px;">Twitter</a>
-                            <a href="#"><img src="assets/icons/icon_team-link_gray.svg" style="width:15px; height:15px;">Linkedln</a>
-                            <a href="#"><img src="assets/icons/icon_team-inst_gray.svg" style="width:15px; height:15px;">Instagram</a>
+                    <div class="tabs-panel" data-index="3">
+                        <div class="tm_info-overlay">
+                            <h4>About Jason.</h4>
+                            <p>Tellus mauris a diam maecenas sed. Arcu cursus vitae congue mauris rhoncus.
+                                Dui faucibus in ornare quam. Praesent elementum facilisis leo vel fringilla
+                                est ullamcorper. Pellentesque elit eget gravida cum. Ornare quam viverra
+                                orci sagittis eu volutpat odio. Elementum eu facilisis sed odio. Molestie
+                                ac feugiat sed lectus. Fringilla phasellus faucibus scelerisque eleifend
+                                donec pretium vulputate sapien nec.</p>
+                        </div>
+                        <div class="socials">
+                            <img src="assets/icons/icon_team-all_links.svg" alt="About us in..." style="width:36px; height:36px;">
+                            <div class="socials-links">
+                                <a href="#"><img src="assets/icons/icon_team-fb_gray.svg" style="width:15px; height:15px;">Facebook</a>
+                                <a href="#"><img src="assets/icons/icon_team-twit_gray.svg" style="width:15px; height:15px;">Twitter</a>
+                                <a href="#"><img src="assets/icons/icon_team-link_gray.svg" style="width:15px; height:15px;">Linkedln</a>
+                                <a href="#"><img src="assets/icons/icon_team-inst_gray.svg" style="width:15px; height:15px;">Instagram</a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -368,14 +379,12 @@
 </section>
 <section class="stats">
     <div class="container-fluid">
-        <div class="container stats-elements">
+        <div class="container stats-block">
             <div class="stats-element">
                 <img src="assets/icons/logo_stats-progress.svg">
                 <h4>12,458</h4>
                 <span>Projects Completed</span>
                 <div class="se_circle">
-                    <div class="se_circle-outside"></div>
-                    <div class="se_circle-between"></div>
                     <div class="se_circle-inside"></div>
                 </div>
             </div>
@@ -384,8 +393,6 @@
                 <h4>1,796</h4>
                 <span>Satisfied Clients</span>
                 <div class="se_circle">
-                    <div class="se_circle-outside"></div>
-                    <div class="se_circle-between"></div>
                     <div class="se_circle-inside"></div>
                 </div>
             </div>
@@ -394,8 +401,6 @@
                 <h4>1,000</h4>
                 <span>Positive Feedbacks</span>
                 <div class="se_circle">
-                    <div class="se_circle-outside"></div>
-                    <div class="se_circle-between"></div>
                     <div class="se_circle-inside"></div>
                 </div>
             </div>
@@ -404,8 +409,6 @@
                 <h4>1,500</h4>
                 <span>Freebies Released</span>
                 <div class="se_circle">
-                    <div class="se_circle-outside"></div>
-                    <div class="se_circle-between"></div>
                     <div class="se_circle-inside"></div>
                 </div>
             </div>
@@ -414,55 +417,87 @@
 </section>
 <section id="steps">
     <div class="container">
-        <div class="section-title">
-            <h2>Work Steps.</h2>
-            <p>We understand your requirement and provide quality works.</p>
-        </div>
-        <article class="process-steps">
+        <div class="steps-content">
+            <div class="section-title">
+                <h2>Work Steps.</h2>
+                <p>We understand your requirement and provide quality works.</p>
+            </div>
             <div class="step-item">
-                <img src="assets/images/works/step_123.jpg">
+                <div class="step-item-pict">
+                    <img src="assets/images/works/step_123.jpg">
+                </div>
+                <div class="step-pict-gradient"></div>
+                <div class="step-item-shadow"></div>
                 <div class="step-item-description">
-                    <h2>01</h2>
-                    <h6>Project Understanding</h6>
-                    <p>Buyer strategy incubator niche market startup.
-                        Entrepreneur non disclosure agreement MVP
-                        traction beta social media investor accelerator.</p>
+                    <div class="sid-number">
+                        <h2>01</h2>
+                    </div>
+                    <div class="sid-text">
+                        <h6>Project Understanding</h6>
+                        <p>Buyer strategy incubator niche market startup.
+                            Entrepreneur non disclosure agreement MVP
+                            traction beta social media investor accelerator.</p>
+                    </div>
                 </div>
             </div>
             <div class="step-item">
-                <img src="assets/images/works/step_234.jpg">
+                <div class="step-item-pict">
+                    <img src="assets/images/works/step_234.jpg">
+                </div>
+                <div class="step-pict-gradient"></div>
+                <div class="step-item-shadow"></div>
                 <div class="step-item-description">
-                    <h2>02</h2>
+                    <div class="sid-number">
+                        <h2>02</h2>
+                    </div>
+                    <div class="sid-text">
                     <h6>Research &amp; Planning </h6>
                     <p>Buyer strategy incubator niche market startup.
                         Entrepreneur non disclosure agreement MVP
                         traction beta social media investor accelerator.</p>
+                    </div>
                 </div>
             </div>
             <div class="step-item">
-                <img src="assets/images/works/step_345.jpg">
+                <div class="step-item-pict">
+                    <img src="assets/images/works/step_345.jpg">
+                </div>
+                <div class="step-pict-gradient"></div>
+                <div class="step-item-shadow"></div>
                 <div class="step-item-description">
-                    <h2>03</h2>
+                    <div class="sid-number">
+                        <h2>03</h2>
+                    </div>
+                    <div class="sid-text">
                     <h6>Wireframe &amp; Design</h6>
                     <p>Buyer strategy incubator niche market startup.
                         Entrepreneur non disclosure agreement MVP
                         traction beta social media investor accelerator.</p>
+                    </div>
                 </div>
             </div>
             <div class="step-item">
-                <img src="assets/images/works/step_456.jpg">
+                <div class="step-item-pict">
+                    <img src="assets/images/works/step_456.jpg">
+                </div>
+                <div class="step-pict-gradient"></div>
+                <div class="step-item-shadow"></div>
                 <div class="step-item-description">
-                    <h2>04</h2>
+                    <div class="sid-number">
+                        <h2>04</h2>
+                    </div>
+                    <div class="sid-text">
                     <h6>Development</h6>
                     <p>Buyer strategy incubator niche market startup.
                         Entrepreneur non disclosure agreement MVP
                         traction beta social media investor accelerator.</p>
+                    </div>
                 </div>
             </div>
-        </article>
+        </div>
     </div>
 </section>
-<section id="pricing">
+<section class="bg-gray" id="pricing">
     <div class="container">
         <div class="pricing-content">
             <div class="section-title">
@@ -475,8 +510,10 @@
                         <li class="plan-name"><h4>Starter</h4></li>
                         <li class="plan-cost">
                             <div class="price-circle">
-                            <span>$125</span>
-                            <span>Per Month</span>
+                                <div class="price-circle-inside">
+                                    <h4>$125</h4>
+                                    <span>Per Month</span>
+                                </div>
                             </div>
                         </li>
                         <li class="plan-field"><b>200GB</b> Online Storage</li>
@@ -493,8 +530,10 @@
                         <li class="plan-name"><h4>Ultimate</h4></li>
                         <li class="plan-cost">
                             <div class="price-circle">
-                                <span>$195</span>
-                                <span>Per Month</span>
+                                <div class="price-circle-inside">
+                                    <h4>$195</h4>
+                                    <span>Per Month</span>
+                                </div>
                             </div>
                         </li>
                         <li class="plan-field"><b>800GB</b> Online Storage</li>
@@ -511,8 +550,10 @@
                         <li class="plan-name"><h4>Professional</h4></li>
                         <li class="plan-cost">
                             <div class="price-circle">
-                                <span>$145</span>
-                                <span>Per Month</span>
+                                <div class="price-circle-inside">
+                                    <h4>$145</h4>
+                                    <span>Per Month</span>
+                                </div>
                             </div>
                         </li>
                         <li class="plan-field"><b>500GB</b> Online Storage</li>
@@ -528,25 +569,100 @@
         </div>
     </div>
 </section>
-<section id="testimonials">
+<section class="reviews" id="testimonials">
     <div class="container">
-        <div class="section-title">
-            <h2>Testimonials.</h2>
-            <p>We understand your requirement and provide quality works.</p>
-        </div>
-        <div class="carousel-wrapper">
-            <div class="slider">
-                <div class="slide slide_1">
-                    <img src="assets/images/people/review_123.jpg">
-                    <div class="review-info">
-                        <p>Deployment ownership non-disclosure agreement vesting period
-                            crowdfunding success influencer partnership equity series A
-                            financing network effects user experience crowdsource. Burn
-                            rate stock bootstrapping direct mailing release client traction
-                            creative facebook monetization crowdfunding rockstar.</p>
-                        <span class="rv_sign">Melina</span>
-                        <span class="rv_name">Melina Albrecht</span>
-                        <span class="rv_post">Founder, TingTong</span>
+        <div class="review-content">
+            <div class="section-title">
+                <h2>Testimonials.</h2>
+                <p>We understand your requirement and provide quality works.</p>
+            </div>
+            <div id="slider-wrap">
+                <div id="slider">
+                    <div class="slide slide_1">
+                        <div class="review-photo">
+                            <img src="assets/images/people/review_123.jpg">
+                        </div>
+                        <div class="review-info">
+                            <p>Deployment ownership non-disclosure agreement vesting period
+                                crowdfunding success influencer partnership equity series A
+                                financing network effects user experience crowdsource. Burn
+                                rate stock bootstrapping direct mailing release client traction
+                                creative facebook monetization crowdfunding rockstar.</p>
+                            <span class="rv_sign">Melina</span>
+                            <span class="rv_name">Melina Albrecht</span>
+                            <span class="rv_post">Founder, TingTong</span>
+                        </div>
+                    </div>
+                    <div class="slide slide_2">
+                        <div class="review-photo">
+                            <img src="assets/images/people/review_234.jpg">
+                        </div>
+                        <div class="review-info">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                                sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                Netus et malesuada fames ac. Sed elementum tempus egestas sed
+                                sed risus pretium. In dictum non consectetur a erat nam at lectus.
+                                At augue eget arcu dictum. Et malesuada fames ac turpis egestas
+                                maecenas pharetra.</p>
+                            <span class="rv_sign">Danny_Br</span>
+                            <span class="rv_name">Danzel Brown</span>
+                            <span class="rv_post">Technical Manager, Brooklin Lab</span>
+                        </div>
+                    </div>
+                    <div class="slide slide_3">
+                        <div class="review-photo">
+                            <img src="assets/images/people/review_345.jpg">
+                        </div>
+                        <div class="review-info">
+                            <p>Lobortis feugiat vivamus at augue eget arcu dictum. Pharetra vel
+                                turpis nunc eget lorem. Ipsum a arcu cursus vitae congue mauris
+                                rhoncus. Orci nulla pellentesque dignissim enim sit amet venenatis.</p>
+                            <span class="rv_sign">J.Goldberg</span>
+                            <span class="rv_name">Joshua Goldberg</span>
+                            <span class="rv_post">Director, R-N-F Ltd</span>
+                        </div>
+                    </div>
+                    <div class="slide slide_4">
+                        <div class="review-photo">
+                            <img src="assets/images/people/review_456.jpg">
+                        </div>
+                        <div class="review-info">
+                            <p>Viverra orci sagittis eu volutpat odio. Ut tellus elementum sagittis
+                                vitae et leo. Interdum velit euismod in pellentesque massa placerat
+                                duis ultricies. Posuere urna nec tincidunt praesent semper feugiat
+                                nibh sed pulvinar. Orci phasellus egestas tellus rutrum tellus.</p>
+                            <span class="rv_sign">BlumR.</span>
+                            <span class="rv_name">Rosalinda Blum</span>
+                            <span class="rv_post">HR, BongBang</span>
+                        </div>
+                    </div>
+                    <div class="slide slide_5">
+                        <div class="review-photo">
+                            <img src="assets/images/people/review_567.jpg">
+                        </div>
+                        <div class="review-info">
+                            <p>Nulla porttitor massa id neque aliquam vestibulum morbi.
+                                Hac habitasse platea dictumst vestibulum rhoncus est.
+                                Sagittis purus sit amet volutpat consequat mauris nunc congue nisi.</p>
+                            <span class="rv_sign">LWill</span>
+                            <span class="rv_name">Linda Williams</span>
+                            <span class="rv_post">Actress, FreeLanc Corp</span>
+                        </div>
+                    </div>
+                    <div class="slide slide_6">
+                        <div class="review-photo">
+                            <img src="assets/images/people/review_678.jpg">
+                        </div>
+                        <div class="review-info">
+                            <p>Quam elementum pulvinar etiam non quam lacus suspendisse faucibus
+                                interdum. Fermentum odio eu feugiat pretium nibh. Non curabitur
+                                gravida arcu ac. Enim ut sem viverra aliquet. Diam in arcu
+                                cursus euismod quis viverra nibh cras. Aliquet nibh praesent
+                                tristique magna sit amet purus.</p>
+                            <span class="rv_sign">AKarpi-</span>
+                            <span class="rv_name">Alex Karpinsky</span>
+                            <span class="rv_post">Legal Advisor, NZK Entertantment</span>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -647,6 +763,7 @@
 </footer>
 
 <script src="assets/scripts/vplay.js"></script>
-
+<script src="assets/scripts/tmtabs.js"></script>
+<script src="assets/scripts/rvslider.js"></script>
 </body>
 </html>

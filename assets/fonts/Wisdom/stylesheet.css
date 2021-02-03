@@ -1,11 +1,11 @@
 @font-face {
 font-family: 'Wisdom Script';
-src: url('../fonts/Wisdom-Script.eot');
-src: url('../fonts/Wisdom-Script.eot?#iefix') format('embedded-opentype'),
-     url('../fonts/Wisdom-Script.woff2') format('woff2'),
-     url('../fonts/Wisdom-Script.woff') format('woff'),
-     url('../fonts/Wisdom-Script.ttf') format('truetype'),
-     url('../fonts/Wisdom-Script.svg#Wisdom-Script') format('svg');
+src: url('Wisdom-Script.eot');
+src: url('Wisdom-Script.eot?#iefix') format('embedded-opentype'),
+     url('Wisdom-Script.woff2') format('woff2'),
+     url('Wisdom-Script.woff') format('woff'),
+     url('Wisdom-Script.ttf') format('truetype'),
+     url('Wisdom-Script.svg#Wisdom-Script') format('svg');
 font-weight: normal;
 font-style: normal;
 }
