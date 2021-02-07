@@ -1,17 +1,16 @@
 (function ($) {
-var hwSlideSpeed = 700;
-var hwTimeOut = 3000;
-var hwNeedLinks = true;
-var slilinkss = true;
+let hwSlideSpeed = 700;
+let hwTimeOut = 4000;
+let slilinkss = true;
 
 $(document).ready(function(e) {
 	$('.slide').css(
 		{"position" : "absolute",
 		 "top":'0', "left": '0'}).hide().eq(0).show();
-	var slideNum = 0;
-	var slideTime;
+	let slideNum = 0;
+	let slideTime;
 	slideCount = $("#slider .slide").size();
-	var animSlide = function(arrow){
+	let animSlide = function(arrow){
 		clearTimeout(slideTime);
 		$('.slide').eq(slideNum).fadeOut(hwSlideSpeed);
 		if(arrow == "next"){
@@ -30,30 +29,18 @@ $(document).ready(function(e) {
 		$(".control-slide.active").removeClass("active");
 		$('.control-slide').eq(slideNum).addClass('active');
 		}
-if(hwNeedLinks){
-var $linkArrow = $('<a id="prewbutton" href="#">&lt;</a><a id="nextbutton" href="#">&gt;</a>')
-	.prependTo('#slider');
-	$('#nextbutton').click(function(){
-		animSlide("next");
-		return false;
-		})
-	$('#prewbutton').click(function(){
-		animSlide("prew");
-		return false;
-		})
-}
-	var $adderSpan = '';
+	let $adderSpan = '';
 	$('.slide').each(function(index) {
 			$adderSpan += '<span class = "control-slide">' + index + '</span>';
 		});
 	$('<div class ="sli-links">' + $adderSpan +'</div>').appendTo('#slider-wrap');
 	$(".control-slide:first").addClass("active");
 	$('.control-slide').click(function(){
-	var goToNum = parseFloat($(this).text());
+	let goToNum = parseFloat($(this).text());
 	animSlide(goToNum);
 	});
-	var pause = false;
-	var rotator = function(){
+	let pause = false;
+	let rotator = function(){
 			if(!pause){slideTime = setTimeout(function(){animSlide('next')}, hwTimeOut);}
 			}
 	$('#slider-wrap').hover(

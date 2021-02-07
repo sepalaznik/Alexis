@@ -1,5 +1,5 @@
 $(function () {
-  var $videoContainer = $('#video'),
+  let $videoContainer = $('#video'),
     $videoControls = $('.video-control'),
     $video = $('#myVideo')[0];
 
