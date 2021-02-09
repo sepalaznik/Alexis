@@ -169,6 +169,8 @@ box-shadow: 8px -8px 12px rgba(204,204,204,0.4);
 position: absolute;
 right: 0;
 top: 50%;
+-moz-transform: translateY(-50%);
+-webkit-transform: translateY(-50%);
 transform: translateY(-50%);
 }
 .about-us-box:after, .contact-block:after {
@@ -318,6 +320,8 @@ position: relative;
 position: absolute;
 top: 50%;
 left: 50%;
+-moz-transform: translate(-50%, -50%);
+-webkit-transform: translate(-50%, -50%);
 transform: translate(-50%, -50%);
 display: flex;
 flex-direction: column;
@@ -389,6 +393,8 @@ position: absolute;
 bottom: 0;
 left: 0;
 right: 0;
+-moz-transform: translateY(98%);
+-webkit-transform: translateY(98%);
 transform: translateY(98%);
 opacity: 0;
 transition: all 0.5s linear;
@@ -426,6 +432,8 @@ left: 0;
 right: 0;
 }
 .portfolio-item:hover .portfolio-item-name {
+-moz-transform: translateY(0);
+-webkit-transform: translateY(0);
 transform: translateY(0);
 opacity: 1;
 }
@@ -568,8 +576,14 @@ justify-content: flex-start;
 .stats-element:nth-of-type(4) .se_circle { border-color: rgb(254,185,96); }
 
 @keyframes spin {
-from { transform: rotate(0deg); }
-to { transform: rotate(360deg); }
+from { -moz-transform: rotate(0deg);
+-webkit-transform: rotate(0deg);
+transform: rotate(0deg);
+ }
+to { -moz-transform: rotate(360deg);
+-webkit-transform: rotate(360deg);
+transform: rotate(360deg);
+ }
 }
 .se_circle-inside {
 margin: 1px;
@@ -577,6 +591,9 @@ width: 8px;
 height: 8px;
 border: 0;
 border-radius: 50%;
+-moz-transform-origin: 5px 5px;
+-o-transform-origin: 5px 5px;
+-webkit-transform-origin: 5px 5px;
 transform-origin: 5px 5px;
 animation: spin 2s linear infinite;
 }
@@ -700,10 +717,14 @@ opacity: 0;
 
 .step-item:nth-of-type(even):hover .step-item-description,
 .step-item:nth-of-type(even):hover .step-item-shadow {
+-moz-transform: translate(45%, 17%);
+-webkit-transform: translate(45%, 17%);
 transform: translate(45%, 17%);
 }
 .step-item:nth-of-type(odd):hover .step-item-description,
 .step-item:nth-of-type(odd):hover .step-item-shadow {
+-moz-transform: translate(-45%, 17%);
+-webkit-transform: translate(-45%, 17%);
 transform: translate(-45%, 17%);
 }
 .sid-number {
@@ -1074,9 +1095,9 @@ margin-right: 12px;
 .step-item:nth-of-type(even) .step-item-description { top: -8%; left: -30%; }
 .step-item:nth-of-type(odd) .step-item-description { top: -8%; right: -30%; }
 .step-item:nth-of-type(even):hover .step-item-description,
-.step-item:nth-of-type(even):hover .step-item-shadow { transform: translate(36%, 8%); }
+.step-item:nth-of-type(even):hover .step-item-shadow { -moz-transform: translate(36%, 8%); -webkit-transform: translate(36%, 8%); transform: translate(36%, 8%); }
 .step-item:nth-of-type(odd):hover .step-item-description,
-.step-item:nth-of-type(odd):hover .step-item-shadow { transform: translate(-36%, 8%); }
+.step-item:nth-of-type(odd):hover .step-item-shadow { -moz-transform: translate(-36%, 8%); -webkit-transform: translate(-36%, 8%); transform: translate(-36%, 8%); }
 }
 
 @media (max-width:768px) {
@@ -1085,7 +1106,7 @@ h1 { font-size: 40px; }
 h2 { font-size: 30px; }
 .about-content { padding-bottom: 0; }
 .about-us-pict { padding-bottom: 0; display: none; }
-.about-us-box { width: 100%; position: static; top: 0; transform: none;}
+.about-us-box { width: 100%; position: static; top: 0; -moz-transform: none; -webkit-transform: none; transform: none;}
 .portfolio-item { width: calc(50% - 30px); }
 .team-items li { width: calc(50% - 30px); }
 .team-items li.active:after { display: none; }
@@ -1100,9 +1121,9 @@ h2 { font-size: 30px; }
 .step-item:nth-of-type(even) .step-item-description { top: 0; left: 0; }
 .step-item:nth-of-type(odd) .step-item-description { top: 0; right: 0; }
 .step-item:nth-of-type(even):hover .step-item-description,
-.step-item:nth-of-type(even):hover .step-item-shadow { transform: none; }
+.step-item:nth-of-type(even):hover .step-item-shadow { -moz-transform: none; -webkit-transform: none; transform: none; }
 .step-item:nth-of-type(odd):hover .step-item-description,
-.step-item:nth-of-type(odd):hover .step-item-shadow { transform: none; }
+.step-item:nth-of-type(odd):hover .step-item-shadow { -moz-transform: none; -webkit-transform: none; transform: none; }
 .sid-number { width: 40px; height: 40px; }
 .pricing-item { width: calc(50% - 30px); }
 .review-photo { max-width: 182px; min-width: 182px; }
