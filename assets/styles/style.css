@@ -877,11 +877,12 @@ margin-top: 90px;
 height: 399px;
 position: relative;
 }
-.sli-links {
-text-align: right;
-color: transparent;
+.slider-dots {
+position: absolute;
+bottom: -24px;
+right: 0;
 }
-.sli-links .control-slide {
+.slider-dots_item {
 margin-left: 8px;
 display: inline-block;
 width: 16px;
@@ -890,7 +891,7 @@ border: 2px solid rgb(255,255,255);
 border-radius: 50%;
 background: transparent;
 }
-.sli-links .control-slide:hover {
+.slider-dots_item:hover {
 cursor: pointer;
 background: -moz-radial-gradient(circle, rgb(255,255,255), rgb(255,255,255) 4px, transparent 4px, transparent 8px);
 background: -o-radial-gradient(circle, rgb(255,255,255), rgb(255,255,255) 4px, transparent 4px, transparent 8px);
@@ -898,7 +899,7 @@ background: -webkit-radial-gradient(circle, rgb(255,255,255), rgb(255,255,255) 4
 background: radial-gradient(circle, rgb(255,255,255), rgb(255,255,255) 4px, transparent 4px, transparent 8px);
 
 }
-.sli-links .control-slide.active {
+.slider-dots_item.active {
 border: 2px solid rgb(252,95,69);
 background: -moz-radial-gradient(circle, rgb(252,95,69), rgb(252,95,69) 4px, transparent 4px, transparent 8px);
 background: -o-radial-gradient(circle, rgb(252,95,69), rgb(252,95,69) 4px, transparent 4px, transparent 8px);
@@ -1126,6 +1127,7 @@ h2 { font-size: 30px; }
 .step-item:nth-of-type(odd):hover .step-item-shadow { -moz-transform: none; -webkit-transform: none; transform: none; }
 .sid-number { width: 40px; height: 40px; }
 .pricing-item { width: calc(50% - 30px); }
+.review-info { padding: 14px 25px; }
 .review-photo { max-width: 182px; min-width: 182px; }
 .why-item { width: calc(50% - 80px); }
 .message-form input { width: calc(100% - 32px); }

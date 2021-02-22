@@ -14,3 +14,6 @@ $(function () {
     }
   });
 });
+
+// модуль требует подключения jquery в html:
+// <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
