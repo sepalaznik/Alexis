@@ -1,22 +1,14 @@
 let slideIndex = 1;
 showSlides(slideIndex);
 
-function plusSlide() {
-    showSlides(slideIndex += 1);
-}
-
-function minusSlide() {
-    showSlides(slideIndex -= 1);
-}
-
 function currentSlide(n) {
     showSlides(slideIndex = n);
 }
 
 function showSlides(n) {
     let i;
-    let slides = document.getElementsByClassName("slide");
-    let dots = document.getElementsByClassName("slider-dots_item");
+    let slides = document.querySelectorAll(".slide");
+    let dots = document.querySelectorAll(".slider-dots_item");
     if (n > slides.length) {
       slideIndex = 1
     }

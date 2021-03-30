@@ -870,8 +870,6 @@ padding-bottom: 116px;
 .reviews .section-title h2, .reviews .section-title p {
 color: rgb(255,255,255);
 }
-#slider-wrap {
-}
 #slider {
 margin-top: 90px;
 height: 399px;
@@ -1066,6 +1064,9 @@ margin: 15px;
 padding-left: 30px;
 text-align: left;
 color: rgb(255,255,255);
+}
+.contact-item address {
+font-style: normal;
 }
 
 .contact_1 h5 { color: rgb(56,198,149); margin-bottom: 34px; }
